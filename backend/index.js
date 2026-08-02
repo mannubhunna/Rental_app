@@ -29,7 +29,8 @@ app.use("/uploads", express.static("uploads"));
 
 export const pathfile=path.join(__dirname,"data","properties.json")
 
+const PORT = process.env.PORT || 5000;
 
-app.listen(5000,()=>{
+app.listen(PORT,()=>{
   console.log("server is Runnig boss")
 })
