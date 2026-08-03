@@ -15,7 +15,7 @@ function Addcustomerbyai() {
     }
 
     try {
-      await axios.post(`${SERVER}/customer/addcustomer/byai`, {
+      await axios.post(`${SERVER}customer/addcustomer/byai`, {
         prompt: aidata,
       });
 

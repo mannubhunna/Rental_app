@@ -16,7 +16,7 @@ export function Addbyai() {
     }
 
     try {
-      await axios.post(`${SERVER}/aiinput`, {
+      await axios.post(`${SERVER}aiinput`, {
         prompt: aidata,
       });
 

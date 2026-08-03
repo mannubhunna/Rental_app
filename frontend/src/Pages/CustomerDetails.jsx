@@ -29,7 +29,7 @@ function CustomerDetail() {
   useEffect(() => {
     async function getCustomer() {
       try {
-        const res = await axios.get(`${SERVER}/customer/${id}`);
+        const res = await axios.get(`${SERVER}customer/${id}`);
         
         setCustomer(res.data);
       } catch (err) {
@@ -45,7 +45,7 @@ function CustomerDetail() {
   const handleDelete = async () => {
     try {
       console.log("delete ke liye id aagyi",id)
-      await axios.delete(`${SERVER}/customer/${id}`);
+      await axios.delete(`${SERVER}customer/${id}`);
 
       alert("Customer Deleted Successfully");
 

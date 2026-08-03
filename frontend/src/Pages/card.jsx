@@ -22,7 +22,7 @@ const navigate = useNavigate();
     
     async function getData() {
       try {
-        const res = await axios.get(`${SERVER}/properties`);
+        const res = await axios.get(`${SERVER}properties`);
       
         setProperties(res.data.data || []);
         

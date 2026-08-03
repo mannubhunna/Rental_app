@@ -21,7 +21,7 @@ function CustomerCard() {
   useEffect(() => {
     async function getData() {
       try {
-        const res = await axios.get(`${SERVER}/customers`);
+        const res = await axios.get(`${SERVER}customers`);
         
         setCustomers(res.data || []);
       } catch (error) {

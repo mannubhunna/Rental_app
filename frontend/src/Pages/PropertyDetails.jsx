@@ -32,7 +32,7 @@ function PropertyDetails() {
   useEffect(() => {
     const getProperty = async () => {
       try {
-        const res = await axios.get(`${SERVER}/property/${id}`);
+        const res = await axios.get(`${SERVER}property/${id}`);
 
         setProperty(res.data.data);
       } catch (error) {
@@ -60,7 +60,7 @@ function PropertyDetails() {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `${SERVER}/updateproperty/${id}`,
+        `${SERVER}updateproperty/${id}`,
 
         editData,
       );
@@ -85,7 +85,7 @@ function PropertyDetails() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`${SERVER}/deleteproperty/${id}`);
+      await axios.delete(`${SERVER}deleteproperty/${id}`);
 
       alert("Property Deleted Successfully");
 
