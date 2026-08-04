@@ -37,6 +37,7 @@ export async function propertyById(req,res) {
 
 export async function addProperty (req, res) {
   try {
+    
     const property = await Inventory.create({
       propertyName: req.body.propertyName,
       budget: req.body.budget,
@@ -57,6 +58,7 @@ export async function addProperty (req, res) {
       data: property,
     });
   } catch (error) {
+    console.log(error.message)
     res.status(500).json({
       success: false,
       message: error.message,
@@ -139,3 +141,4 @@ export async function updateproperty(req, res) {
     });
   }
 }
+

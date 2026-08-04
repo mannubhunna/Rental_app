@@ -32,7 +32,7 @@ function AddProperty() {
 
   };
 const handleSubmit = async (e) => {
-  console.log(formData)
+  
   e.preventDefault();
 
   try {
@@ -44,16 +44,14 @@ const handleSubmit = async (e) => {
       furnished: formData.furnished,
       availableFor: formData.availableFor,
       floor: formData.floor,
-      independent: formData.independent,
       maintenance: formData.maintenance,
       parking: formData.parking,
       description: formData.description,
     };
 
-    const res = await axios.post(
-      `${SERVER}/addProperty`,
-      data
-    );
+    
+    const res = await axios.post( `${SERVER}addProperty`,data);
+     console.log(res)
 
     alert("Property Added Successfully");
 
